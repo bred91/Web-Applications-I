@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 04</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <!-- Custom CSS for this document -->
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- Including Bootstrap Javascript library -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- day.js -->
+    <script defer src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script defer src="films.js"></script>
+    
+    <!-- Custom CSS for this document -->
+    <script defer src="logic.js"></script>
+  </head>
+
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-padding">
+
+        <!-- Sidebar toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#left-sidebar" 
+            aria-controls="left-sidebar" aria-expanded="false" aria-label="Toggle sidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo and title -->
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+                <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
+              </svg>
+            Film Library
+        </a>
+        
+        <!-- Search form -->
+        <form class="form-inline my-2 my-lg-0 mx-auto d-none d-md-block" action="#" role="search" aria-label="Quick search">
+            <input class="form-control me-auto" type="search" placeholder="Search" aria-label="Search query">
+        </form>
+
+        <!-- Link to the user profile -->
+        <div class="navbar-nav ms-md-auto">
+            <a class="nav-item nav-link" href="#">
+            <svg class="bi bi-people-circle" width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z" clip-rule="evenodd"/>
+            </svg>
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Content of the page -->
+    <div class="container-fluid" style="height:100px;">
+        <div class="row vheight-100">
+            <!-- Left sidebar -->
+            <aside class="collapse col-12 d-md-block col-md-3 bg-light below-nav" id="left-sidebar">
+                <div class="list-group list-group-flush">
+                    <a href="#" id="filter-all" class="list-group-item list-group-item-action active">All</a>
+                    <a href="#" id="filter-favorites" class="list-group-item list-group-item-action">Favorites</a>
+                    <a href="#" id="filter-best" class="list-group-item list-group-item-action">Best Rated</a>
+                    <a href="#" id="filter-seen-last-month"class="list-group-item list-group-item-action">Seen Last Month</a>
+                    <a href="#" id="filter-unseen" class="list-group-item list-group-item-action">Unseen</a>                
+                </div>
+            </aside>
+
+             <!-- Main content -->
+            <main class="col-md-9 col-12 below-nav">
+                <h1 class="mb-2" id="filter-title">All</h1>
+
+                
+                <!-- List of films -->
+                <ul class="list-group list-group-flush" id="list-films">
+                  <!-- This list will be dinamycally filled by the JavaScript file -->
+                </ul>
+
+                <!-- Add a new film... -->
+                <button type="button" class="btn btn-lg btn-dark fixed-right-bottom">&#43;</button>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+            crossorigin="anonymous">
+    </script>
+  </body>
+</html>
