@@ -92,7 +92,7 @@ function MyTable(props) {
       </thead>
       <tbody>
         {list.map((e) =>
-          // we actuall
+          // we use the id as key
           // we use an unique key for each row
           // we pass the functions to the child component through props
           <MyRow e={e} key={e.id} increaseScore={()=>increaseScore(e.id)}
