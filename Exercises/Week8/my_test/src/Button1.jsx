@@ -3,11 +3,16 @@ import{useState} from 'react';
 function Button1(props) {
     const [buttonLang, setButtonLang] = useState(props.lango);
 
-    if(buttonLang === 'en') {
-      return <button onClick={()=>setButtonLang('it')}>English</button>;
+    const but = () => {
+      setButtonLang( e => !e);
     }
-    else
-      return <button onClick={()=>setButtonLang('en')}>Italiano</button>;
+
+    return (
+      // onClick={()=>setEnglish((eng)=>(!eng))
+      <button onClick={but}>
+        {buttonLang ? 'English' : 'Italian'}
+      </button>
+    );
   }
 
   export default Button1;
