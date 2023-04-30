@@ -8,7 +8,7 @@ import MyNav from './MyNav';
 import MyAside from './MyAside';
 import MyTable from './MyTable';
 import filmList from './films.js';
-import selected_lst from './MyFilter';"./MyFilter.js";
+import selected_lst from './MyFilter';
 
 
 function MyMain(props) {
