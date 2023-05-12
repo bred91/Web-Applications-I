@@ -12,7 +12,11 @@ GET http://localhost:3001/api/questions/3/answers HTTP/1.1
 
 POST http://localhost:3001/api/answers HTTP/1.1
 Content-Type: application/json
-
 {
-  "text": 
+    "text": "prova",
+    "respondent": "Bob",
+    "score": 0,
+    "date": "2023-05-06",
+    "questionId":1
 }
+###
