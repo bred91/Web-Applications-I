@@ -1,0 +1,83 @@
+// GET /api/films
+GET http://localhost:3002/api/films HTTP/1.1
+###
+
+// GET /api/films?filter=nomefiltro
+// correct call
+GET http://localhost:3002/api/films?filter=filter-favorite HTTP/1.1
+###
+// wrong filter
+GET http://localhost:3002/api/films?filter=filter-favor HTTP/1.1
+###
+// wrong param name
+GET http://localhost:3002/api/films?filttro=filter-favorite HTTP/1.1
+###
+
+
+// GET /api/films/:id
+// correct call
+GET http://localhost:3002/api/films/2 HTTP/1.1
+###
+// id is not a number
+GET http://localhost:3002/api/films/a HTTP/1.1
+###
+// id is not in the database
+GET http://localhost:3002/api/films/25 HTTP/1.1
+###
+
+
+// POST /api/films
+// correct call
+POST http://localhost:3002/api/films HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Matrix 2",
+    "favorite": 1,
+    "rating": 5,
+    "user": 1,
+    "watchDate": "2023-05-13"
+}
+###
+
+
+// PUT /api/films/:id
+// correct call
+PUT http://localhost:3002/api/films/6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Matrix 2",
+    "favorite": 0,
+    "rating": 4,
+    "user": 1,
+    "watchDate": "2023-05-13"
+}
+###
+
+
+// PUT /api/films/:id/favorite
+// correct call
+PUT http://localhost:3002/api/films/6/favorite HTTP/1.1
+Content-Type: application/json
+
+{
+    "favorite": 0
+}
+###
+
+
+// PUT /api/films/:id/rating
+// correct call
+PUT http://localhost:3002/api/films/6/rating HTTP/1.1
+Content-Type: application/json
+
+{
+    "rating": 5
+}
+###
+
+
+// DELETE /api/films/:id
+// correct call
+DELETE http://localhost:3002/api/films/6 HTTP/1.1
