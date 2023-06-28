@@ -1,0 +1,36 @@
+// GET /api/pages
+GET http://localhost:3001/api/pages HTTP/1.1
+###
+
+PUT http://localhost:3001/api/siteName HTTP/1.1
+Content-Type: application/json
+
+{
+  "siteName": "My New Site Name"
+}
+###
+
+GET http://localhost:3001/api/content HTTP/1.1
+###
+
+POST http://localhost:3001/api/pages HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "T1",
+  "authorId": 10,
+  "creationDate": "2023-01-01",
+  "publicationDate": "2023-01-01",
+  "blocks": [
+    {
+      "type": 1,
+      "order": 1,
+      "content": "Hello World"
+    },
+    {
+      "type": 3,
+      "order": 2,
+      "content": "1"
+    }
+  ]
+}
