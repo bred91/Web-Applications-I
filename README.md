@@ -1,2 +1,2 @@
 # Web-Application-I
-Repo of the Web Application I course
+Repo of the Web Applications I course
